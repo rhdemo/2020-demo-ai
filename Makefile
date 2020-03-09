@@ -1,5 +1,13 @@
 ##################################
 
+# DEV - run app locally for development
+
+.PHONY: dev
+dev:
+	./install/dev.sh
+
+##################################
+
 # BUILD - build images locally using s2i
 
 .PHONY: build
