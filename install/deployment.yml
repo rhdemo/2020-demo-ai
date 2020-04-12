@@ -48,12 +48,12 @@ objects:
             value: "${FILE_SYSTEM_POLL}"
           resources:
             limits:
-              cpu: '6'
-              memory: 8Gi
+              cpu: 1
+              memory: 1Gi
             requests:
-              cpu: '6'
-              memory: 8Gi
-          ports:              
+              cpu: 1
+              memory: 1Gi
+          ports:   
           - containerPort: ${{PORT}}
             protocol: TCP
           - containerPort: ${{REST_PORT}}
@@ -108,7 +108,7 @@ parameters:
   from: "[a-zA-Z0-9]{10}"
   required: true
 - name: REPLICAS
-  value: "1"
+  value: "12"
   required: true
 - name: IMAGE_REPOSITORY
   description: Name of the Image containing the model
@@ -135,6 +135,6 @@ parameters:
   value: '0'
   required: true
 - name: FILE_SYSTEM_POLL
-  description: polling model changes.
+  description: polling model changes
   value: '1200'
   required: true

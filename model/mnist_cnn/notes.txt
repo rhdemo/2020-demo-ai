@@ -1,0 +1,18 @@
+98.8% accuracy
+
+signature_def['predict_images']:
+  The given SavedModel SignatureDef contains the following input(s):
+    inputs['images'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, 784)
+        name: Placeholder:0
+    inputs['keep_prob'] tensor_info:
+        dtype: DT_FLOAT
+        shape: unknown_rank
+        name: dropout/Placeholder:0
+  The given SavedModel SignatureDef contains the following output(s):
+    outputs['scores'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, 10)
+        name: fc2/add:0
+  Method name is: tensorflow/serving/predict

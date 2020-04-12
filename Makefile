@@ -1,3 +1,9 @@
+ENV_FILE := .env
+ifneq ("$(wildcard $(ENV_FILE))","")
+include ${ENV_FILE}
+export $(shell sed 's/=.*//' ${ENV_FILE})
+endif
+
 ##################################
 
 # DEV - run app locally for development
@@ -21,3 +27,11 @@ build:
 .PHONY: push
 push:
 	./install/push.sh
+
+##################################
+
+# TEST - test quay image
+
+.PHONY: test
+test:
+	./install/test-image.sh
